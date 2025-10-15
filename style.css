@@ -1,0 +1,209 @@
+/* General Body & Typography */
+:root {
+    --primary-color: #005A9C; /* A confident, trustworthy blue */
+    --secondary-color: #FDB813; /* An energetic, optimistic yellow/gold */
+    --dark-grey: #333333;
+    --light-grey: #f4f4f4;
+    --text-color: #4A4A4A;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    color: var(--dark-grey);
+}
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+/* Header & Navigation */
+header {
+    background: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-grey);
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h1 {
+    color: white;
+}
+
+.hero-section .subtitle {
+    max-width: 600px;
+    margin: 20px auto 30px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.cta-button {
+    background: var(--secondary-color);
+    color: var(--dark-grey);
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    background-color: #ffc43d;
+}
+
+/* Content Sections */
+.content-section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.content-section p {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.bg-light {
+    background-color: var(--light-grey);
+}
+
+/* Benefits Section */
+.benefits-section {
+    padding: 80px 20px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.benefit-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.benefit-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.cta-section h2 {
+    color: white;
+}
+
+.cta-section p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+/* Footer */
+footer {
+    background: var(--dark-grey);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .nav-links {
+        display: none; /* Simple hiding for now. A JS solution would add a hamburger menu. */
+    }
+
+    .hero-section {
+        padding: 80px 20px;
+    }
+}
