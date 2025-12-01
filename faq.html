@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ | Vital Return</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Font Settings */
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .brand-font { font-family: 'Montserrat', sans-serif; }
+        
+        /* Clinical Palette */
+        .bg-medical-navy { background-color: #0A2647; }
+        .text-medical-navy { color: #0A2647; }
+        .bg-electric-lemon { background-color: #FFE600; }
+        .text-electric-lemon { color: #FFE600; }
+        .bg-lab-white { background-color: #F4F6F8; }
+        .border-medical-navy { border-color: #0A2647; }
+        .border-electric-lemon { border-color: #FFE600; }
+        
+        /* Button Styles */
+        .btn-lemon:hover { background-color: #FFD700; transform: translateY(-1px); }
+        .btn-outline:hover { background-color: #f1f5f9; transform: translateY(-1px); }
+        
+        html { scroll-behavior: smooth; }
+
+        /* Animation Classes */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Modal Styles */
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased relative">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-medical-navy text-white text-center py-3 px-4 text-xs font-semibold tracking-wide">
+        FORMULATED BY A REGISTERED DIETITION NUTRITIONIST FOR PLASMA DONORS
+    </div>
+
+    <!-- Navigation -->
+    <nav class="w-full bg-white border-b border-gray-100 py-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-xl font-bold text-medical-navy tracking-tight brand-font flex items-center gap-2">
+                <i data-lucide="droplet" class="w-6 h-6 fill-medical-navy"></i>
+                VITAL RETURN
+            </a>
+            
+            <!-- Menu Items -->
+            <div class="flex items-center gap-4">
+                <a href="benefits.html" class="hidden md:flex items-center gap-2 text-sm font-bold text-medical-navy border-2 border-slate-100 hover:border-medical-navy hover:bg-blue-50 px-5 py-2 rounded-full transition duration-300">
+                    <i data-lucide="flask-conical" class="w-4 h-4"></i>
+                    View Benefits
+                </a>
+                <a href="index.html#offer" class="hidden md:block bg-medical-navy text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition shadow-md">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-lab-white py-16 md:py-20 border-b border-gray-100 relative overflow-hidden">
+        <!-- Yellow Decor Circle -->
+        <div class="absolute -top-10 -right-10 w-40 h-40 bg-electric-lemon opacity-10 rounded-full blur-2xl"></div>
+        <div class="absolute top-10 left-10 w-20 h-20 bg-electric-lemon opacity-10 rounded-full blur-xl"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in-section relative z-10">
+            <div class="inline-block bg-electric-lemon text-medical-navy px-3 py-1 rounded-full text-xs font-bold tracking-wide mb-4 shadow-sm">
+                DONOR GUIDE
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold text-medical-navy mb-4">Frequently Asked Questions</h1>
+            <p class="text-slate-600">Everything you need to know about donor recovery and hydration.</p>
+        </div>
+    </header>
+
+    <!-- Main FAQ Content -->
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-16">
+        
+        <!-- Category: General Product -->
+        <div class="mb-12 fade-in-section">
+            <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-4">
+                <div class="w-12 h-12 rounded-full bg-electric-lemon flex items-center justify-center shadow-sm">
+                    <i data-lucide="info" class="text-medical-navy w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-medical-navy">General Questions</h2>
+            </div>
+            
+            <div class="space-y-8 pl-2 md:pl-16">
+                 <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        What makes Vital Return different from sports drinks like Gatorade?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        Sports drinks are designed to replace what you lose through sweat. Vital Return is scientifically 
+                        formulated to replace what you lose through plasma donation. While sports drinks offer basic hydration, 
+                        they lack the protein required to restore your serum levels and the specific vitamin blend needed to 
+                        combat post-donation fatigue. We are the first all-in-one solution designed specifically for the donor’s 
+                        physiology.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Is Vital Return only for plasma donors?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        Definitely not. While we engineered Vital Return to solve the extreme depletion caused by plasma 
+                        donation, that same high-performance formula makes it an incredible recovery tool for athletes. 
+                        Whether you’ve just finished a donation or a heavy workout, your body is craving the same things:
+                         rapid rehydration and protein for muscle repair. Think of Vital Return as a sports recovery drink 
+                         that has been "stress-tested" for medical-grade fatigue—if it works for a donor, it will work wonders 
+                         for your post-gym recovery.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: Usage & Timing -->
+        <div class="mb-12 fade-in-section">
+            <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-4">
+                <div class="w-12 h-12 rounded-full bg-electric-lemon flex items-center justify-center shadow-sm">
+                    <i data-lucide="clock" class="text-medical-navy w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-medical-navy">Usage & Timing</h2>
+            </div>
+            
+            <div class="space-y-8 pl-2 md:pl-16">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        When is the best time to drink Vital Return?
+                    </h3>
+                    <div class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100 space-y-3">
+                        <p>For best results, drink Vital Return immediately (within 15 minutes) after your donation to 
+                            jumpstart your recovery, stabilize your blood sugar, and replenish your fluids.</p>
+                        <p class="bg-blue-50 p-3 rounded-lg border border-blue-100 text-sm">
+                            <span class="font-bold text-medical-navy">Pro Tip:</span> You can also drink it 60–90 minutes 
+                            before your appointment. The extra protein and hydration can help you pass your health screening
+                             and make the blood draw faster. Note: If drinking before, sip slowly to ensure you don’t spike 
+                             your heart rate before your vitals check.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Can I drink this during my donation?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        If your center allows water bottles on the donor floor, absolutely. Sipping Vital Return during your
+                         donation is a great way to stay ahead of dehydration and keep your calcium levels up.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        How do I mix it?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        Mix one packet (or scoop) with 16-20oz of cold water. Shake well for 20 seconds. Because we use 
+                        high-quality whey isolate, it may foam slightly—this is normal! Let it settle for a minute for the
+                         perfect clear consistency.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: Ingredients & Health -->
+        <div class="mb-12 fade-in-section">
+            <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-4">
+                <div class="w-12 h-12 rounded-full bg-electric-lemon flex items-center justify-center shadow-sm">
+                    <i data-lucide="flask-conical" class="text-medical-navy w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-medical-navy">Ingredients & Dietary</h2>
+            </div>
+            
+            <div class="space-y-8 pl-2 md:pl-16">
+                 <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        How much protein is in a serving?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        17g of protein per serving. We use Whey Isolate because it absorbs quickly, helping replace the serum
+                         protein lost during the plasmapheresis process.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Does it contain caffeine?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        No. We focus on natural energy through dextrose and hydration, ensuring you can go home and rest without 
+                        disrupting your sleep schedule.
+                    </p>
+                </div>
+                 <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Does Vital Return help with the "tingles" (Citrate Reaction)?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        Yes. The "tingling" sensation (or metallic taste) is caused by the anticoagulant used during donation, 
+                        which temporarily lowers your calcium levels. Vital Return is fortified with Calcium to help buffer 
+                        your body against this reaction, so you can skip the chalky antacids and just enjoy your drink.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Will this help my Iron / Hematocrit levels?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        Vital Return is not an iron supplement, but it is a powerful ally for your iron levels. We include 500mg 
+                        of Vitamin C (550% DV), which is clinically proven to significantly increase the absorption of iron from food.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Is this safe for diabetics?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        Vital Return contains <strong>Dextrose</strong>, a fast-absorbing sugar designed to restore blood glucose 
+                        levels quickly. If you are diabetic or monitoring your blood sugar, please consult your physician before 
+                        using this product.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Is it dairy-free / vegan?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        No. Vital Return uses <strong>Clear Whey Isolate</strong>, which is derived from milk. However, 
+                        Whey Isolate is highly refined and contains very little lactose compared to standard Whey Concentrate, 
+                        making it easier on the stomach.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Category: Shipping -->
+        <div class="fade-in-section">
+            <div class="flex items-center gap-4 mb-8 border-b border-gray-100 pb-4">
+                <div class="w-12 h-12 rounded-full bg-electric-lemon flex items-center justify-center shadow-sm">
+                    <i data-lucide="package" class="text-medical-navy w-6 h-6"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-medical-navy">Shipping & Subscriptions</h2>
+            </div>
+            
+            <div class="space-y-8 pl-2 md:pl-16">
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        How long does shipping take?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        We ship all orders within 24 hours from our facility in Utah. Most donors receive their 
+                        package within 3-5 business days.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg text-slate-800 mb-2 flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-electric-lemon"></span>
+                        Can I pause my subscription?
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base pl-4 border-l-2 border-gray-100">
+                        Absolutely. You can pause, skip, or cancel your subscription at any time through the 
+                        donor portal link in your email receipt.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Contact Support Block -->
+    <section class="bg-blue-50 py-16 border-t border-blue-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in-section">
+            <!-- Yellow Icon Container -->
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-electric-lemon text-medical-navy shadow-lg mb-6 transform hover:scale-110 transition duration-300">
+                <i data-lucide="mail-question" class="w-8 h-8"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-medical-navy mb-4">Still have questions?</h2>
+            <p class="text-slate-600 mb-8 max-w-lg mx-auto">
+                Our team consists of regular donors and nutritionists. We are happy to answer any questions 
+                about the product or the physiology of donation.
+            </p>
+            <a href="mailto:support@vital-return.com" class="inline-flex items-center gap-2 text-lg font-bold text-medical-navy bg-white border-2 border-electric-lemon px-8 py-3 rounded-full hover:bg-electric-lemon transition shadow-sm">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                support@vital-return.com
+            </a>
+            <p class="text-sm text-slate-500 mt-4">Response time: Under 24 hours</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <div class="font-bold text-medical-navy text-xl mb-6 brand-font">VITAL RETURN</div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mb-8">
+                <button onclick="openModal('privacy')" class="hover:text-medical-navy">Privacy Policy</button>
+                <button onclick="openModal('terms')" class="hover:text-medical-navy">Terms of Service</button>
+                <button onclick="openModal('refund')" class="hover:text-medical-navy">Refund Policy</button>
+                <button onclick="openModal('contact')" class="hover:text-medical-navy">Contact Support</button>
+            </div>
+            <p class="text-xs text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                *These statements have not been evaluated by the Food and Drug Administration. 
+                This product is not intended to diagnose, treat, cure, or prevent any disease. 
+                <br><br>
+                © 2025 Vital Return LLC. All rights reserved. Provo, UT.
+            </p>
+        </div>
+    </footer>
+
+    <!-- LEGAL MODAL (Functional) -->
+    <div id="legalModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeModal()"></div>
+        <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col overflow-hidden">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <h3 id="modalTitle" class="text-xl font-bold text-medical-navy">Policy Title</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 transition">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-8 overflow-y-auto">
+                <div id="modalBody" class="prose prose-sm text-slate-600">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('legalModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+
+        const content = {
+            privacy: {
+                title: "Privacy Policy",
+                body: "<p><strong>Effective Date: 2025</strong></p><p>Vital Return respects your privacy. We do not sell your personal data to third parties.</p><h4>Information We Collect</h4><p>We collect information you provide directly to us, such as when you create an account, make a purchase, or sign up for our newsletter.</p>"
+            },
+            terms: {
+                title: "Terms of Service",
+                body: "<p><strong>Welcome to Vital Return.</strong></p><p>By accessing this website, you agree to be bound by these Terms and Conditions.</p><h4>Use of Site</h4><p>You agree not to use this site for any unlawful purpose.</p>"
+            },
+            refund: {
+                title: "Refund Policy",
+                body: "<p><strong>100% Satisfaction Guarantee</strong></p><p>If you don't feel the difference in your recovery, we will refund your first order in full within 30 days of purchase.</p><p>To initiate a return, please contact support@vitalreturn.com with your order number.</p>"
+            },
+            contact: {
+                title: "Contact Support",
+                body: "<p><strong>We are here to help.</strong></p><p>Email us at: <a href='mailto:support@vital-return.com' class='text-blue-600 underline'>support@vital-return.com</a></p><p>Hours of Operation: Mon-Fri, 9am - 5pm MST.</p>"
+            }
+        };
+
+        function openModal(type) {
+            const data = content[type];
+            if(data) {
+                modalTitle.innerText = data.title;
+                modalBody.innerHTML = data.body;
+                modal.classList.add('active');
+            }
+        }
+        function closeModal() { modal.classList.remove('active'); }
+        document.addEventListener('keydown', (e) => { if (e.key === "Escape") closeModal(); });
+    </script>
+</body>
+</html>

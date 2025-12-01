@@ -3,81 +3,313 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benefits - Vital Return</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>The Science | Vital Return</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Font Settings */
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .brand-font { font-family: 'Montserrat', sans-serif; }
+        
+        /* Clinical Palette */
+        .bg-medical-navy { background-color: #0A2647; }
+        .text-medical-navy { color: #0A2647; }
+        .bg-electric-lemon { background-color: #FFE600; }
+        .text-electric-lemon { color: #FFE600; }
+        .bg-lab-white { background-color: #F4F6F8; }
+        .border-medical-navy { border-color: #0A2647; }
+        
+        /* Buttons */
+        .btn-lemon:hover { background-color: #FFD700; transform: translateY(-1px); }
+        .btn-outline:hover { background-color: #f1f5f9; transform: translateY(-1px); }
+        
+        html { scroll-behavior: smooth; }
+
+        /* Animation Classes */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
 </head>
-<body>
+<body class="bg-white text-slate-800 antialiased relative">
 
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">VITAL RETURN</a>
-            <ul class="nav-links">
-                <li><a href="index.html#problem">The Problem</a></li>
-                <li><a href="index.html#solution">Our Solution</a></li>
-                <li><a href="benefits.html">Benefits</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="bg-medical-navy text-white text-center py-3 px-4 text-xs font-semibold tracking-wide">
+        FORMULATED BY A REGISTERED DIETITION NUTRITIONIST FOR PLASMA DONORS
+    </div>
 
-    <main>
-        <section class="page-header">
-            <div class="container">
-                <h1>The Vital Return Advantage</h1>
-                <p class="subtitle">Our formula is scientifically designed to address the three primary challenges of post-donation recovery: protein loss, dehydration, and energy depletion.</p>
-            </div>
-        </section>
-
-        <div class="page-content">
-            <div class="container">
-                <section class="quick-benefits">
-                    <div class="benefit-item">
-                        <div class="checkmark-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
-                        <p><strong>Replenishes Protein:</strong> Aids in rapidly replenishing the 50-60 grams of protein lost during donation.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="checkmark-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
-                        <p><strong>Accelerates Rehydration:</strong> Restores key electrolytes for faster, more effective rehydration than water alone.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="checkmark-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
-                        <p><strong>Restores Energy:</strong> Provides a clean energy boost to fight fatigue and help you reclaim your day.</p>
-                    </div>
-                    <div class="benefit-item">
-                        <div class="checkmark-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"/></svg></div>
-                        <p><strong>All-in-One Convenience:</strong> Combines everything you need into one simple, effective, and great-tasting mix.</p>
-                    </div>
-                </section>
-
-                <hr>
-
-                <section class="detailed-summary">
-                    <h2>A Deeper Dive Into Recovery</h2>
-                    <article class="benefit-detail">
-                        <h3>Critical Protein Replenishment</h3>
-                        <p>A single plasma donation removes a significant amount of protein from your body, which is the primary cause of post-donation fatigue. Vital Return is uniquely formulated with a high-quality, easily digestible protein blend to give your body the essential building blocks needed to synthesize new plasma proteins. This is our key differentiator and something that water or typical sports drinks simply cannot provide.</p>
-                    </article>
-                    <article class="benefit-detail">
-                        <h3>Advanced Rehydration</h3>
-                        <p>Dehydration after a donation can lead to dizziness, headaches, and lightheadedness. Effective rehydration requires electrolytes to help your body absorb and retain fluid in the bloodstream. Our scientifically-balanced electrolyte blend accelerates this process, helping you restore proper fluid balance much more efficiently than by drinking water alone.</p>
-                    </article>
-                    <article class="benefit-detail">
-                        <h3>Immediate Energy Restoration</h3>
-                        <p>The donation process is physically demanding. To combat the lethargic feeling that follows, our formula includes a source of clean, easily-metabolized carbohydrates. This provides an immediate source of fuel to stabilize blood sugar levels, restore your energy, and empower you to get back to your classes, work, or life without missing a beat.</p>
-                    </article>
-                </section>
+    <nav class="w-full bg-white border-b border-gray-100 py-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-medical-navy tracking-tight brand-font flex items-center gap-2">
+                <i data-lucide="droplet" class="w-6 h-6 fill-medical-navy"></i>
+                VITAL RETURN
+            </a>
+            <div class="flex items-center gap-6">
+                <a href="index.html" class="hidden md:block text-sm font-medium text-slate-600 hover:text-medical-navy transition">Home</a>
+                <a href="index.html#offer" class="bg-medical-navy text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-slate-800 transition">Shop Now</a>
             </div>
         </div>
-    </main>
+    </nav>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Vital Return LLC. All Rights Reserved.</p>
-            <p>Based in Provo, Utah.</p>
+    <header class="bg-lab-white py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center fade-in-section">
+            <div class="inline-block bg-blue-100 text-medical-navy px-3 py-1 rounded-full text-xs font-bold tracking-wide mb-4">
+                CLINICAL BREAKDOWN
+            </div>
+            <h1 class="text-4xl lg:text-5xl font-bold text-medical-navy mb-6">Engineered for the<br>Donor Physiology</h1>
+            <p class="text-lg text-slate-600 leading-relaxed max-w-2xl mx-auto">
+                Donating takes a lot out of you. Vital Return puts it back. Here is the formula that helps you reclaim your day.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-20 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                
+                <div class="w-full md:w-1/3 flex justify-center fade-in-section">
+                    <div class="bg-blue-50 w-64 h-64 rounded-full flex items-center justify-center relative">
+                        <div class="absolute inset-0 border-2 border-dashed border-blue-200 rounded-full animate-spin-slow" style="animation-duration: 10s;"></div>
+                        <i data-lucide="biceps-flexed" class="w-24 h-24 text-medical-navy"></i>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3 fade-in-section delay-100">
+                    <h2 class="text-3xl font-bold text-medical-navy mb-6">1. Core Replenishment</h2>
+                    <p class="text-slate-600 mb-8 italic">Fighting fatigue & immediate volume loss.</p>
+
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="check" class="w-6 h-6 text-electric-lemon fill-medical-navy"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800">17g Clear Whey Isolate Protein</h3>
+                                <p class="text-slate-600 mt-2 leading-relaxed">
+                                    When you donate, you lose serum protein. We use premium Clear Whey Isolate to provide the essential building blocks for rapid plasma synthesis. It rebuilds what was taken, helping you avoid that "drained" feeling for the rest of the day.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="mt-1"><i data-lucide="check" class="w-6 h-6 text-electric-lemon fill-medical-navy"></i></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-slate-800">Immediate Energy (Dextrose)</h3>
+                                <p class="text-slate-600 mt-2 leading-relaxed">
+                                    Donation lowers blood sugar. Sucrose (table sugar) is too slow. We use Dextrose for instant restoration of glucose levels, eliminating dizziness and the energy crash faster than complex sugars.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-medical-navy text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-3xl font-bold mb-4">2. The Electrolyte Matrix</h2>
+                <p class="text-gray-300 max-w-2xl mx-auto">
+                    Water alone takes 45 minutes to absorb. Our specific mineral blend creates the osmotic pressure needed to pull hydration into your bloodstream <strong>instantly</strong>.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 fade-in-section delay-100 hover:bg-white/10 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="waves" class="text-electric-lemon w-6 h-6"></i>
+                        <h3 class="text-xl font-bold">Pink Himalayan Salt (Sodium)</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Sodium is the engine of hydration. It restores blood volume and pressure, serving as the fastest way to counteract lightheadedness immediately after the needle is removed.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 fade-in-section delay-200 hover:bg-white/10 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="heart-pulse" class="text-electric-lemon w-6 h-6"></i>
+                        <h3 class="text-xl font-bold">Potassium Chloride</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Vital for preventing muscle weakness and spasms. It works inside the cells to balance the sodium, ensuring hydration reaches deep tissues, not just the bloodstream.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 fade-in-section delay-100 hover:bg-white/10 transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="brain-circuit" class="text-electric-lemon w-6 h-6"></i>
+                        <h3 class="text-xl font-bold">Magnesium Citrate</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        Helps nerves settle down and promotes muscle relaxation. This prevents the post-donation cramping and twitching while helping your body utilize energy efficiently.
+                    </p>
+                </div>
+
+                <div class="bg-electric-lemon/10 p-8 rounded-2xl border border-electric-lemon/50 fade-in-section delay-200 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-electric-lemon text-medical-navy text-[10px] font-bold px-2 py-1">DONOR ESSENTIAL</div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <i data-lucide="bone" class="text-electric-lemon w-6 h-6"></i>
+                        <h3 class="text-xl font-bold text-white">Calcium Citrate</h3>
+                    </div>
+                    <p class="text-sm text-gray-300 leading-relaxed">
+                        <strong>Targeted intervention against the "Citrate Reaction."</strong> During donation, anticoagulants bind to your calcium, causing tingling lips and faintness. We replace that calcium immediately.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-lab-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex flex-col md:flex-row-reverse items-center gap-12">
+                
+                <div class="w-full md:w-1/3 flex justify-center fade-in-section">
+                    <div class="bg-white shadow-xl w-64 h-64 rounded-full flex items-center justify-center relative">
+                        <i data-lucide="shield-plus" class="w-24 h-24 text-green-500"></i>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-2/3 fade-in-section delay-100">
+                    <h2 class="text-3xl font-bold text-medical-navy mb-6">3. Targeted Systemic Support</h2>
+                    <p class="text-slate-600 mb-8 italic">Absorption & Immunity.</p>
+
+                    <div class="space-y-8">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold text-medical-navy mb-2">Ascorbic Acid (500mg Vitamin C)</h3>
+                            <p class="text-slate-600 text-sm">
+                                Loaded with <strong>5x the daily requirement</strong>. Vitamin C is a robust antioxidant that aids rapid cellular recovery. More importantly for donors, it significantly aids in the absorption of Iron from your next meal, helping keep your hematocrit levels high for future donations.
+                            </p>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                            <h3 class="text-lg font-bold text-medical-navy mb-2">Citric Acid Optimization</h3>
+                            <p class="text-slate-600 text-sm">
+                                Enhances the body's ability to absorb Magnesium and Calcium Citrate, ensuring you actually utilize the minerals we provide rather than passing them through your system.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 fade-in-section">
+            <h2 class="text-3xl font-bold text-center text-medical-navy mb-12">Don't Settle for Cookies & Water</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr>
+                            <th class="p-4 text-left border-b-2 border-gray-100 text-slate-400 font-medium">Feature</th>
+                            <th class="p-4 text-center border-b-2 border-medical-navy bg-blue-50/50 rounded-t-xl min-w-[140px]">
+                                <span class="text-medical-navy font-bold text-lg">Vital Return</span>
+                            </th>
+                            <th class="p-4 text-center border-b-2 border-gray-100 text-slate-500 font-medium">Sports Drinks</th>
+                            <th class="p-4 text-center border-b-2 border-gray-100 text-slate-500 font-medium">Water</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm md:text-base">
+                        <tr>
+                            <td class="p-4 border-b border-gray-100 font-bold text-slate-700">Protein for Plasma Repair</td>
+                            <td class="p-4 border-b border-blue-50 bg-blue-50/30 text-center font-bold text-green-600">17g Isolate</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-400">0g</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-400">0g</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-100 font-bold text-slate-700">Rehydration Speed</td>
+                            <td class="p-4 border-b border-blue-50 bg-blue-50/30 text-center font-bold text-green-600">Clinical / Rapid</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-600">Moderate</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-600">Slow (45 mins)</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-100 font-bold text-slate-700">Calcium (Anti-Tingle)</td>
+                            <td class="p-4 border-b border-blue-50 bg-blue-50/30 text-center font-bold text-green-600">Yes</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-400">Rarely</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-400">No</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-100 font-bold text-slate-700">Iron Absorption Aid</td>
+                            <td class="p-4 border-b border-blue-50 bg-blue-50/30 text-center font-bold text-green-600">500mg Vit C</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-400">Minimal</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-400">None</td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 border-b border-gray-100 font-bold text-slate-700">Sugar Source</td>
+                            <td class="p-4 border-b border-blue-50 bg-blue-50/30 text-center font-bold text-medical-navy">Dextrose (Fast)</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-600">HF Corn Syrup</td>
+                            <td class="p-4 border-b border-gray-100 text-center text-slate-400">None</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-medical-navy relative overflow-hidden">
+        <div class="absolute -top-20 -right-20 w-96 h-96 bg-electric-lemon opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center relative z-10 fade-in-section">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Feel the difference on your next donation</h2>
+            <p class="text-blue-100 mb-8 text-lg">Stop losing your afternoon to fatigue. Restore your levels in 15 minutes</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="index.html#offer" class="bg-electric-lemon text-medical-navy px-10 py-4 rounded-full font-bold text-lg shadow-lg btn-lemon transition">
+                    Get Vital Return
+                </a>
+            </div>
+            <p class="mt-6 text-sm text-gray-400">Feel better or we refund you</p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <div class="font-bold text-medical-navy text-xl mb-6 brand-font">VITAL RETURN</div>
+            <p class="text-xs text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+                <br><br>
+                © 2025 Vital Return LLC. All rights reserved. Provo, UT.
+            </p>
         </div>
     </footer>
 
+    <script>
+        lucide.createIcons();
+
+        // Scroll Animation
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>

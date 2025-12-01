@@ -3,84 +3,422 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vital Return | Plasma Donation Recovery</title>
-    <meta name="description" content="The first recovery drink scientifically formulated for plasma donors. Feel better faster and reclaim your day with Vital Return.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Vital Return | Clinical Plasma Recovery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom Font Settings */
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4, .brand-font { font-family: 'Montserrat', sans-serif; }
+        
+        /* Clinical Palette */
+        .bg-medical-navy { background-color: #0A2647; }
+        .text-medical-navy { color: #0A2647; }
+        .bg-electric-lemon { background-color: #FFE600; } /* High Viz Yellow */
+        .text-electric-lemon { color: #FFE600; }
+        .bg-lab-white { background-color: #F4F6F8; }
+        .border-medical-navy { border-color: #0A2647; }
+        
+        /* Custom Button Hover */
+        .btn-lemon:hover { background-color: #FFD700; transform: translateY(-1px); }
+        .btn-outline:hover { background-color: #f1f5f9; transform: translateY(-1px); }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+
+        /* Animation Classes */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, visibility;
+        }
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        /* Staggered delay for grid items */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Modal Styles */
+        .modal {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-white text-slate-800 antialiased relative">
 
-    <header>
-        <nav class="container">
-            <a href="#" class="logo">VITAL RETURN</a>
-            <ul class="nav-links">
-                <li><a href="#problem">The Problem</a></li>
-                <li><a href="#solution">Our Solution</a></li>
-                <li><a href="benefits.html">Benefits</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="bg-medical-navy text-white text-center py-3 px-4 text-xs font-semibold tracking-wide">
+        FORMULATED BY A REGISTERED DIETITION NUTRITIONIST FOR PLASMA DONORS — LIMITED BATCH AVAILABLE
+    </div>
 
-    <main>
-        <section id="hero" class="hero-section">
-            <div class="container">
-                <h1>Reclaim Your Day After Donating Plasma.</h1>
-                <p class="subtitle">Vital Return is the first scientifically-formulated recovery drink designed to help plasma donors feel better, faster. Stop letting post-donation fatigue win.</p>
-                <a href="#cta" class="cta-button">Pre-Order Now</a>
+    <nav class="w-full bg-white border-b border-gray-100 py-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 flex justify-between items-center">
+            <div class="text-xl font-bold text-medical-navy tracking-tight brand-font flex items-center gap-2">
+                <i data-lucide="droplet" class="w-6 h-6 fill-medical-navy"></i>
+                VITAL RETURN
             </div>
-        </section>
+            
+            <div class="flex items-center gap-4">
+                <a href="benefits.html" class="hidden md:flex items-center gap-2 text-sm font-bold text-medical-navy border-2 border-slate-100 hover:border-medical-navy hover:bg-blue-50 px-5 py-2 rounded-full transition duration-300">
+                    <i data-lucide="flask-conical" class="w-4 h-4"></i>
+                    View Benefits
+                </a>
 
-        <section id="problem" class="content-section">
-            <div class="container">
-                <h2>The Hidden Cost of Donating</h2>
-                <p>Donating plasma is a powerful way to do good, but it takes a significant toll on your body. Each donation removes 50-60 grams of protein and vital electrolytes, leading to dizziness, fatigue, and dehydration that can ruin the rest of your day. Water helps, but it doesn't solve the core problem.</p>
+                <a href="#offer" class="hidden md:block bg-medical-navy text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-slate-800 transition shadow-md">
+                    Shop Now
+                </a>
             </div>
-        </section>
+        </div>
+    </nav>
 
-        <section id="solution" class="content-section bg-light">
-            <div class="container">
-                <h2>A Targeted, All-in-One Solution</h2>
-                <p>Vital Return is not just another sports drink. It's a precisely-calibrated blend designed specifically to address the unique physiological stress of plasma donation. Our all-in-one formula provides exactly what your body needs to start recovering immediately.</p>
+    <header class="relative bg-lab-white overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-24 flex flex-col-reverse md:flex-row items-center gap-12 lg:gap-16">
+            
+            <div class="w-full md:w-1/2 space-y-6 fade-in-section">
+                <div class="inline-block bg-blue-100 text-medical-navy px-3 py-1 rounded-full text-xs font-bold tracking-wide mb-2">
+                    NEW: VOLUME RESTORATION MECHANISM™
+                </div>
+                <h1 class="text-4xl lg:text-5xl font-bold text-medical-navy leading-tight">
+                    Reclaim your day <br>Donate Again
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed max-w-xl text-pretty">
+                    The first clinical hydration formula engineered specifically for plasma donors. Eliminate post donation fatigue, restore your levels, and get back to your day in 15 minutes.
+                </p>
                 
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#offer" class="bg-electric-lemon text-medical-navy px-8 py-4 rounded-full font-bold text-lg shadow-lg btn-lemon text-center transition w-full sm:w-auto">
+                        Shop Now
+                    </a>
+                </div>
+                
+                <div class="flex items-center justify-center sm:justify-start gap-2 text-sm text-slate-500 font-medium pt-2">
+                    <i data-lucide="check-circle" class="w-4 h-4 text-green-500"></i> Ships within 24h
+                </div>
             </div>
-        </section>
 
-        <section id="benefits" class="benefits-section">
-            <div class="container">
-                <h2>Scientifically Formulated for Rapid Recovery</h2>
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <h3>Replenish Lost Protein</h3>
-                        <p>Our formula includes a targeted serving of high-quality protein to help your body begin rebuilding its plasma protein levels right away, supporting muscle function and reducing weakness.</p>
+            <div class="w-full md:w-1/2 relative fade-in-section delay-200 flex justify-center">
+                <div class="w-full max-w-md bg-white rounded-3xl shadow-xl p-6 sm:p-10 aspect-square flex items-center justify-center border border-gray-100 relative overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-gray-50 to-white"></div>
+                    
+                    <div class="relative z-10 text-center space-y-6 w-full h-full flex flex-col justify-center">
+                        <div class="w-3/4 mx-auto aspect-[3/4] flex items-center justify-center relative">
+                            <img src="https://placehold.co/600x800/png?text=Vital+Return+Bag" alt="Vital Return Frosty Lemonade Bag" class="w-full h-full object-contain drop-shadow-xl hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <p class="text-sm font-bold text-medical-navy tracking-wide mt-4">FLAVOR: FROSTY LEMONADE</p>
                     </div>
-                    <div class="benefit-card">
-                        <h3>Restore Vital Electrolytes</h3>
-                        <p>We provide a precise balance of sodium, potassium, and other electrolytes to combat dehydration, aid nerve function, and help alleviate dizziness and headaches.</p>
-                    </div>
-                    <div class="benefit-card">
-                        <h3>Sustain Energy Levels</h3>
-                        <p>A smart blend of carbohydrates helps restore your energy quickly without the crash, allowing you to get back to your studies, work, or life with confidence.</p>
+
+                    <div class="absolute top-4 right-4 sm:top-6 sm:right-6 bg-white/95 backdrop-blur shadow-lg px-3 py-2 sm:px-4 sm:py-2 rounded-lg text-xs font-bold text-medical-navy border border-gray-100 z-20">
+                        17g Clear Whey
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <section id="cta" class="cta-section">
-            <div class="container">
-                <h2>Be the First to Experience the Difference.</h2>
-                <p>We are launching soon under Utah's Cottage Food program, serving the Provo/Orem student community. Sign up to get notified and receive an exclusive launch discount.</p>
-                <a href="#" class="cta-button">Join the Waitlist</a>
+    <div class="bg-white py-10 border-b border-gray-100 fade-in-section">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <p class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-6">Trusted by donors frequenting</p>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4 md:gap-16 opacity-60 grayscale">
+                <span class="text-lg md:text-xl font-bold text-slate-700">BioLife Centers</span>
+                <span class="text-lg md:text-xl font-bold text-slate-700">CSL Plasma</span>
+                <span class="text-lg md:text-xl font-bold text-slate-700">Grifols</span>
+                <span class="text-lg md:text-xl font-bold text-slate-700">Kedplasma</span>
             </div>
-        </section>
-    </main>
+        </div>
+    </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Vital Return LLC. All Rights Reserved.</p>
-            <p>Based in Provo, Utah.</p>
+    <section class="py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-12 md:mb-16 fade-in-section">
+                <h2 class="text-3xl font-bold text-medical-navy mb-4">Why Sports Drinks Aren't Enough</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Sports drinks are designed for sweat. You didn't lose sweat; you lose <span class="font-semibold text-medical-navy">plasma</span>.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-stretch">
+                <div class="bg-red-50 p-8 rounded-2xl border border-red-100 fade-in-section h-full">
+                    <h3 class="text-xl font-bold text-red-800 mb-4 flex items-center gap-2">
+                        <i data-lucide="x-circle" class="w-5 h-5"></i> The Donation Crash
+                    </h3>
+                    <ul class="space-y-3 text-red-900/80 text-sm">
+                        <li class="flex gap-2 items-start"><span class="font-bold min-w-[10px]">•</span> Loss of 800ml fluid volume instantly.</li>
+                        <li class="flex gap-2 items-start"><span class="font-bold min-w-[10px]">•</span> Loss of essential proteins.</li>
+                        <li class="flex gap-2 items-start"><span class="font-bold min-w-[10px]">•</span> Standard water takes 45 mins to absorb.</li>
+                        <li class="flex gap-2 items-start"><span class="font-bold min-w-[10px]">•</span> Result: Dizziness, fatigue.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-8 rounded-2xl border border-blue-100 fade-in-section delay-100 h-full">
+                    <h3 class="text-xl font-bold text-medical-navy mb-4 flex items-center gap-2">
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i> The Vital Return Way
+                    </h3>
+                    <ul class="space-y-3 text-slate-700 text-sm">
+                        <li class="flex gap-2 items-start"><span class="font-bold text-medical-navy min-w-[10px]">•</span> VRM™ Technology restores volume fast.</li>
+                        <li class="flex gap-2 items-start"><span class="font-bold text-medical-navy min-w-[10px]">•</span> 17g Clear Whey replaces lost protein.</li>
+                        <li class="flex gap-2 items-start"><span class="font-bold text-medical-navy min-w-[10px]">•</span> Dextrose transport for rapid uptake.</li>
+                        <li class="flex gap-2 items-start"><span class="font-bold text-medical-navy min-w-[10px]">•</span> Result: Walk out feeling 100%.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-medical-navy text-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16 fade-in-section">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3">Clinical-Grade Formulation</h2>
+                <p class="text-electric-lemon font-medium tracking-wide text-xs md:text-sm uppercase">Developed by Scientists & a Registered Dietitian</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-8">
+                
+                <div class="text-center space-y-4 fade-in-section delay-100 px-4">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center">
+                        <i data-lucide="dna" class="w-8 h-8 text-electric-lemon"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">17g Clear Whey</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed">Replenishes vital serum proteins stripped during apheresis.</p>
+                </div>
+
+                <div class="text-center space-y-4 fade-in-section delay-200 px-4">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center">
+                        <i data-lucide="zap" class="w-8 h-8 text-electric-lemon"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">VRM™ Electrolytes</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed">3x the electrolytes of sports drinks. Full electrolyte profile containing Potassium, Sodium, Magnesium, and Calcium.</p>
+                </div>
+
+                <div class="text-center space-y-4 fade-in-section delay-300 px-4">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center">
+                        <i data-lucide="glass-water" class="w-8 h-8 text-electric-lemon"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">Clear & Crisp</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed">Not a milky shake. A refreshing, clear lemonade hydration drink.</p>
+                </div>
+
+                <div class="text-center space-y-4 fade-in-section delay-300 px-4">
+                    <div class="w-16 h-16 mx-auto bg-white/10 rounded-full flex items-center justify-center">
+                        <i data-lucide="shield-plus" class="w-8 h-8 text-electric-lemon"></i>
+                    </div>
+                    <h4 class="font-bold text-lg">Iron Support</h4>
+                    <p class="text-sm text-gray-300 leading-relaxed">Fortified with Vitamin C to aid iron absorption from meals.</p>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center fade-in-section">
+                <a href="benefits.html" class="inline-block border-2 border-[#FFE600] text-[#FFE600] hover:bg-[#FFE600] hover:text-[#0A2647] px-8 py-3 rounded-full font-bold text-sm md:text-base transition duration-300 uppercase tracking-wide">
+                    See All Benefits
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="offer" class="py-20 md:py-24 bg-lab-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 fade-in-section">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+                
+                <div class="w-full md:w-1/2 bg-gray-50 p-8 md:p-12 flex items-center justify-center relative">
+                    <div class="absolute top-6 left-6 bg-electric-lemon text-medical-navy text-xs font-bold px-3 py-1 rounded-full z-10 shadow-sm">
+                        LIMITED RELEASE
+                    </div>
+                    <div class="w-full max-w-[280px] aspect-[3/4] flex items-center justify-center relative">
+                         <img src="https://placehold.co/600x800/png?text=Pack+Shot" alt="Vital Return Pack" class="w-full h-full object-contain drop-shadow-lg mix-blend-multiply">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+                    <div class="mb-6">
+                        <h2 class="text-2xl md:text-3xl font-bold text-medical-navy mb-2">Vital Return Recovery Blend</h2>
+                        <div class="flex items-center gap-2 mb-4">
+                            <div class="flex text-yellow-400">
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                            </div>
+                            <span class="text-sm text-gray-500">Based on pilot donor feedback</span>
+                        </div>
+                        <p class="text-slate-600 mb-6 text-sm md:text-base">
+                            Secure your monthly supply. Formulated for rapid volume restoration post-donation.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 mb-8">
+                        <label class="block relative border-2 border-medical-navy bg-blue-50 rounded-xl p-4 cursor-pointer hover:bg-blue-100 transition">
+                            <input type="radio" name="purchase_type" class="absolute right-4 top-4" checked>
+                            <div class="flex justify-between items-center mb-1 pr-8">
+                                <span class="font-bold text-medical-navy text-sm md:text-base">Subscribe & Save</span>
+                                <span class="font-bold text-medical-navy text-sm md:text-base">$39.00 <span class="text-xs font-normal text-slate-500">/mo</span></span>
+                            </div>
+                            <p class="text-xs text-slate-600">30 Servings. Delivered monthly. Cancel anytime.</p>
+                        </label>
+
+                        <label class="block relative border border-gray-200 rounded-xl p-4 cursor-pointer hover:border-gray-400 transition">
+                            <input type="radio" name="purchase_type" class="absolute right-4 top-4">
+                            <div class="flex justify-between items-center mb-1 pr-8">
+                                <span class="font-semibold text-slate-700 text-sm md:text-base">One-Time Purchase</span>
+                                <span class="font-semibold text-slate-700 text-sm md:text-base">$45.00</span>
+                            </div>
+                            <p class="text-xs text-slate-500">30 Servings ($1.50/drink).</p>
+                        </label>
+                    </div>
+
+                    <button class="w-full bg-medical-navy text-white font-bold text-lg py-4 rounded-full hover:bg-slate-800 transition shadow-lg mb-4">
+                        Add to Cart
+                    </button>
+                    
+                    <p class="text-center text-xs text-gray-400 flex items-center justify-center gap-1">
+                        <i data-lucide="shield-check" class="w-3 h-3"></i> Feel better or we refund you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq-section" class="py-20 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 fade-in-section">
+            <h2 class="text-2xl font-bold text-center text-medical-navy mb-12">Common Donor Questions</h2>
+            
+            <div class="space-y-6">
+                <div class="border-b border-gray-100 pb-6">
+                    <h4 class="font-bold text-lg mb-2">When should I drink this?</h4>
+                    <p class="text-slate-600">For best results, mix one packet with 16oz of cold water and drink it <span class="font-bold">immediately after your donation</span> (within 15 minutes). This helps prevent the post-donation crash.</p>
+                </div>
+                <div class="border-b border-gray-100 pb-6">
+                    <h4 class="font-bold text-lg mb-2">What are the key ingredients in Vital Return?</h4>
+                    <p class="text-slate-600"> Our scientifically-formulated blend focuses on the three critical components 
+                        of post-donation recovery: 1. Protein to rebuild lost plasma proteins, 2. A robust electrolyte blend 
+                        for rapid rehydration, and 3. Natural energy to combat post-donation fatigue.</p>
+                </div>
+                <div class="pb-6">
+                    <h4 class="font-bold text-lg mb-2">How quickly will my body replace the plasma I lost?</h4>
+                    <p class="text-slate-600">Your body is incredibly efficient. The water component of your plasma is generally replaced within 24 hours with proper hydration. The proteins and other vital nutrients take longer to fully regenerate, which is why consistent, targeted nutrition is crucial for regular donors.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 text-center">
+                <a href="faq.html" class="inline-block border-2 border-slate-200 text-slate-600 hover:border-medical-navy hover:text-medical-navy px-8 py-4 rounded-full font-bold text-lg btn-outline text-center transition">
+                    Read FAQ
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+            <div class="font-bold text-medical-navy text-xl mb-6 brand-font">VITAL RETURN</div>
+            <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mb-8">
+                <button onclick="openModal('privacy')" class="hover:text-medical-navy">Privacy Policy</button>
+                <button onclick="openModal('terms')" class="hover:text-medical-navy">Terms of Service</button>
+                <button onclick="openModal('refund')" class="hover:text-medical-navy">Refund Policy</button>
+                <button onclick="openModal('contact')" class="hover:text-medical-navy">Contact Support</button>
+            </div>
+            <p class="text-xs text-gray-400 max-w-2xl mx-auto leading-relaxed">
+                *These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.
+                <br><br>
+                © 2025 Vital Return LLC. All rights reserved. Provo, UT.
+            </p>
         </div>
     </footer>
 
+    <div id="legalModal" class="modal fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/40 backdrop-blur-sm" onclick="closeModal()"></div>
+        
+        <div class="relative bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[80vh] flex flex-col overflow-hidden">
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50">
+                <h3 id="modalTitle" class="text-xl font-bold text-medical-navy">Policy Title</h3>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-red-500 transition">
+                    <i data-lucide="x" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <div class="p-8 overflow-y-auto">
+                <div id="modalBody" class="prose prose-sm text-slate-600">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        // Scroll Animation Observer
+        document.addEventListener("DOMContentLoaded", function() {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            const sections = document.querySelectorAll('.fade-in-section');
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Modal Logic
+        const modal = document.getElementById('legalModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBody = document.getElementById('modalBody');
+
+        const content = {
+            privacy: {
+                title: "Privacy Policy",
+                body: "<p><strong>Effective Date: 2025</strong></p><p>Vital Return respects your privacy. We do not sell your personal data to third parties.</p><h4>Information We Collect</h4><p>We collect information you provide directly to us, such as when you create an account, make a purchase, or sign up for our newsletter.</p><h4>How We Use Information</h4><p>We use this information to process transactions, send updates, and improve our services.</p>"
+            },
+            terms: {
+                title: "Terms of Service",
+                body: "<p><strong>Welcome to Vital Return.</strong></p><p>By accessing this website, you agree to be bound by these Terms and Conditions.</p><h4>Use of Site</h4><p>You agree not to use this site for any unlawful purpose.</p><h4>Medical Disclaimer</h4><p>Vital Return products are supplements, not medication. Always consult your doctor before use.</p>"
+            },
+            refund: {
+                title: "Refund Policy",
+                body: "<p><strong>100% Satisfaction Guarantee</strong></p><p>If you don't feel the difference in your recovery, we will refund your first order in full within 30 days of purchase.</p><p>To initiate a return, please contact support@vitalreturn.com with your order number.</p>"
+            },
+            contact: {
+                title: "Contact Support",
+                body: "<p><strong>We are here to help.</strong></p><p>Email us at: <a href='mailto:support@vitalreturn.com' class='text-blue-600 underline'>support@vitalreturn.com</a></p><p>Hours of Operation: Mon-Fri, 9am - 5pm MST.</p>"
+            }
+        };
+
+        function openModal(type) {
+            const data = content[type];
+            if(data) {
+                modalTitle.innerText = data.title;
+                modalBody.innerHTML = data.body;
+                modal.classList.add('active');
+            }
+        }
+
+        function closeModal() {
+            modal.classList.remove('active');
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
 </body>
+</html>
